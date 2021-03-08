@@ -1,0 +1,15 @@
+name: provision ipos
+work_load:
+  - critial business apps that required sustained IOPS performance or more than 16,000 IOPS per volumes
+  - exmaples:
+    - Large_data_base_workload_such_as:
+      -mongoDB
+    - Cassandra
+    - Microsoft SQL 
+    - MySQL
+    - PostgreSQL
+    - Oracle
+features:
+  - 4GB - 16TB
+  - IOPS is provision MIN 100 - MAX 64,000 (Nitro instances) else Max 32,000
+  - Max ratio  is 50:1 # 50 IOPS  to 1 GB

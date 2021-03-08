@@ -1,0 +1,29 @@
+# NOTES FOR CLASSIC LOAD BALANCER 
+version: 2013
+name: application  load balancer 
+supports:
+  - "HTTP && HTTPS LAYER 7"
+health_checks:
+   - "http"
+hostname: fix hostame "xxxx.region.elb.amazonaws.com"
+work_flow_external: client >> ALB >> target groups
+work_flow_internal: public_ec2 >> CLB >> private_ec2
+target_groups:
+    - "EC2 instances (Auto Scaling Group)" -HTTP
+    - "ECS task (ECS) " -HTTP
+    - "Lambda functions" -HTTP
+    - "IP Adressess" -musbe be private IPs
+use_cases:
+  - "http && https traffic"
+  - "Routing rules" #example.com/users && example.com/post could target diff target groups  
+  - "Routing based on hostname in URL" #one.example.com && other.example.com goes to diff tg
+  - "Routing basing on Query String ,header" # example.com/users?id=123&order=false
+  - "multiple target groups"
+  - "can attch WAF"
+  - "can attch amazon cert manager"
+  - "can target conitaners"
+  - "support for http/2 and websocket"
+  - "support redirects from HTTP to HTTPS"
+  - "ALB are a great fit for mico services and container-base apps (Docker && Amazon ECS)"
+  - "connection termination clietIP >> ALB >> load Balancer Ip (private IP)"
+

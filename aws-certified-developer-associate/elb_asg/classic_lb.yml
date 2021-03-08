@@ -1,0 +1,18 @@
+# NOTES FOR CLASSIC LOAD BALANCER 
+version: 2009
+name: class load balancer 
+supports:
+  - "TCP Layer 4 "
+  - "HTTP && HTTPS LAYER 7"
+health_checks:
+   - "tcp"
+   - "http"
+hostname: fix hostame "xxxx.region.elb.amazonaws.com"
+work_flow_external: client >> CLB >> EC2
+work_flow_internal: public_ec2 >> CLB >> private_ec2
+
+use_cases:
+  - "ec2 classic network"
+  - "doesnt use target groups"
+
+

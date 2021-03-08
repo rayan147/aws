@@ -1,0 +1,10 @@
+name: Cold HDD 
+workload: throughput-oriented storage for large volume of data that is infrequently accessed 
+  - where the lowest cost is important 
+  - Cannto be a boot volume
+
+
+features:
+ 500GB - 16TB 
+ Max IOPS is 250
+ Max throughput of 250 MB/s - can burst

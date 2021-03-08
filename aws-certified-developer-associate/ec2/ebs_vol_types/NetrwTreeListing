@@ -1,0 +1,4 @@
+../
+ebs_vol_types/
+| gp2.yml
+| provision_ipos_ssd.yml

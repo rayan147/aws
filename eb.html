@@ -1,0 +1,267 @@
+  - recommended for most workloads
+  - system boot volumes
+  - virtual desktop
+  - low-latency interactive apps
+  - dev and tst envs
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="AWSDocsDocPageApp">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <title>What is AWS Elastic Beanstalk? - AWS Elastic Beanstalk</title>
+      <meta name="viewport" content="width=device-width,initial-scale=1" />
+      <meta name="assets_root" content="/assets" />
+      <meta name="target_state" content="Welcome" />
+      <meta name="default_state" content="Welcome" />
+      <link rel="icon" type="image/ico" href="/assets/images/favicon.ico" />
+      <link rel="shortcut icon" type="image/ico" href="/assets/images/favicon.ico" />
+      <link rel="canonical" href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/Welcome.html" />
+      <meta name="description" content="Deploy and manage applications in the AWS Cloud without worrying about the infrastructure that runs those applications with AWS Elastic Beanstalk which reduces management complexity without restricting choice or control." />
+      <meta name="deployment_region" content="IAD" />
+      <meta name="product" content="AWS Elastic Beanstalk" />
+      <meta name="guide" content="Developer Guide" />
+      <meta name="locales" content="de_de:Deutsch/en_us:English/es_es:Español/fr_fr:Français/it_it:Italiano/ja_jp:日本語/ko_kr:한국어/pt_br:Português/zh_cn:中文 (简体)/zh_tw:中文 (繁體)" />
+      <meta name="abstract" content="Read conceptual and detailed instructions for using AWS Elastic Beanstalk to quickly deploy and manage applications in the AWS cloud without worrying about the infrastructure that runs those applications." />
+      <meta name="guide-locale" content="en_us" />
+      <meta name="tocs" content="toc-contents.json" />
+      <meta name="feedback-item" content="AEB" />
+      <meta name="this_doc_product" content="AWS Elastic Beanstalk" />
+      <meta name="this_doc_guide" content="Developer Guide" />
+      <link href="/assets/css/vendor4.css?version=2020.09.30" rel="stylesheet" />
+      <link href="/assets/css/awsdocs-common.css?version=2020.09.30" rel="stylesheet" /><script type="text/javascript" src="/assets/js/vendor3.js?version=2020.09.30" defer=""></script><script type="text/javascript" src="/assets/js/vendor4.js?version=2020.09.30" defer=""></script><script type="text/javascript" src="/assets/js/vendor1.js?version=2020.09.30" defer=""></script><script type="text/javascript" src="/assets/js/awsdocs-common.js?version=2020.09.30" defer=""></script><script type="text/javascript" src="/assets/js/awsdocs-doc-app.js?version=2020.09.30" defer=""></script></head>
+   <body class="awsdocs awsui">
+      <div class="awsdocs-container">
+         <awsdocs-header></awsdocs-header>
+         <awsui-app-layout id="app-layout" class="awsui-util-no-gutters" ng-controller="ContentController as $ctrl" header-selector="awsdocs-header" navigation-hide="false" navigation-width="$ctrl.navWidth" navigation-open="$ctrl.navOpen" navigation-change="$ctrl.onNavChange($event)" tools-hide="$ctrl.hideTools" tools-width="$ctrl.toolsWidth" tools-open="$ctrl.toolsOpen" tools-change="$ctrl.onToolsChange($event)">
+            <div id="guide-toc" dom-region="navigation">
+               <awsdocs-toc></awsdocs-toc>
+            </div>
+            <div id="main-column" dom-region="content" tabindex="-1">
+               <awsdocs-view class="awsdocs-view">
+                  <div id="awsdocs-content">
+                     <head>
+                        <title>What is AWS Elastic Beanstalk? - AWS Elastic Beanstalk</title>
+                        <meta name="pdf" content="awseb-dg.pdf#Welcome" />
+                        <meta name="kindle" content="https://www.amazon.com/dp/B076453JXW" />
+                        <meta name="github" content="https://github.com/awsdocs/aws-elastic-beanstalk-developer-guide/tree/main/doc_source/Welcome.md" />
+                        <meta name="forums" content="http://forums.aws.amazon.com/forum.jspa?forumID=86" />
+                        <meta name="feedback" content="https://docs.aws.amazon.com/forms/aws-doc-feedback?hidden_service_name=AEB&amp;topic_url=http://docs.aws.amazon.com/en_us/elasticbeanstalk/latest/dg/Welcome.html" />
+                        <meta name="feedback-yes" content="feedbackyes.html?topic_url=http://docs.aws.amazon.com/en_us/elasticbeanstalk/latest/dg/Welcome.html" />
+                        <meta name="feedback-no" content="feedbackno.html?topic_url=http://docs.aws.amazon.com/en_us/elasticbeanstalk/latest/dg/Welcome.html" />
+                        <meta name="keywords" content="AWS Elastic Beanstalk,Elastic Beanstalk,ebextension,eb extension,deployment,resource management,web application,development" />
+                     </head>
+                     <body>
+                        <div id="main">
+                           <div style="display: none"><a href="awseb-dg.pdf#Welcome" target="_blank" title="Open PDF"></a><a target="_blank" href="https://www.amazon.com/dp/B076453JXW" title="Open Kindle"></a><a href="https://github.com/awsdocs/aws-elastic-beanstalk-developer-guide/tree/main/doc_source/Welcome.md" target="_blank" title="Edit this page on GitHub"></a></div>
+                           <div id="breadcrumbs" class="breadcrumb"><a href="http://aws.amazon.com">AWS</a><a href="/index.html">Documentation</a><a href="/elastic-beanstalk/index.html">AWS Elastic Beanstalk</a><a href="Welcome.html">Developer Guide</a></div>
+                           <div id="page-toc-src"><a href="#Welcome.pricing">Pricing</a><a href="#Welcome.WhereToGo">Where to go next</a></div>
+                           <awsdocs-doc-page-banner></awsdocs-doc-page-banner>
+                           <div id="main-content" class="awsui-util-container">
+                              <div id="main-col-body">
+                                 <awsdocs-language-banner data-service="$ctrl.pageService"></awsdocs-language-banner>
+                                 <h1 class="topictitle" id="Welcome">What is AWS Elastic Beanstalk?</h1>
+                                 <div class="awsdocs-page-header-container">
+                                    <awsdocs-page-header></awsdocs-page-header>
+                                    <awsdocs-filter-selector id="awsdocs-filter-selector"></awsdocs-filter-selector>
+                                 </div>
+                                 <p>Amazon Web Services (AWS) comprises over one hundred services, each of which exposes
+                                    an area of
+                                    functionality. While the variety of services offers flexibility for how you want to
+                                    manage your
+                                    AWS infrastructure, it can be challenging to figure out which services to use and
+                                    how to
+                                    provision them.
+                                 </p>
+                                 <p>With Elastic Beanstalk, you can quickly deploy and manage applications in the AWS
+                                    Cloud without having to learn
+                                    about the infrastructure that runs those applications. Elastic Beanstalk reduces management
+                                    complexity without restricting choice or control. You simply upload your application,
+                                    and Elastic Beanstalk
+                                    automatically handles the details of capacity provisioning, load balancing, scaling,
+                                    and
+                                    application health monitoring.
+                                 </p>
+                                 <p>Elastic Beanstalk supports applications developed in Go, Java, .NET, Node.js, PHP,
+                                    Python, and Ruby.
+                                    When you deploy your application, Elastic Beanstalk builds the selected supported
+                                    platform version and
+                                    provisions one or more AWS resources, such as Amazon EC2 instances, to run your application.
+                                 </p>
+                                 <p>You can interact with Elastic Beanstalk by using the Elastic Beanstalk console, the
+                                    AWS Command Line Interface (AWS CLI), or <b>eb</b>, a high-level CLI designed specifically for
+                                    Elastic Beanstalk.
+                                 </p>
+                                 <p>To learn more about how to deploy a sample web application using Elastic Beanstalk,
+                                    see <a href="https://docs.aws.amazon.com/gettingstarted/latest/deploy/">Getting Started with AWS: Deploying a Web App</a>.
+                                 </p>
+                                 <p>You can also perform most deployment tasks, such as changing the size of your fleet
+                                    of
+                                    Amazon EC2 instances or monitoring your application, directly from the Elastic Beanstalk
+                                    web interface
+                                    (console). 
+                                 </p>
+                                 <p>To use Elastic Beanstalk, you create an application, upload an application version
+                                    in the form of an
+                                    application source bundle (for example, a Java .war file) to Elastic Beanstalk, and
+                                    then provide some
+                                    information about the application. Elastic Beanstalk automatically launches an environment
+                                    and
+                                    creates and configures the AWS resources needed to run your code. After your environment
+                                    is
+                                    launched, you can then manage your environment and deploy new application versions.
+                                    The
+                                    following diagram illustrates the workflow of Elastic Beanstalk.
+                                 </p>
+                                 <div class="mediaobject">
+                                     
+                                    <img src="images/clearbox-flow-00.png" class="aws-docs-img-whiteBg aws-docs-img-padding" alt="&#xA;        Elastic Beanstalk flow&#xA;      " />
+                                     
+                                     
+                                    
+                                 </div>
+                                 <p>After you create and deploy your application, information about the
+                                    application—including metrics, events, and environment status—is available through
+                                    the Elastic Beanstalk console, APIs, or Command Line Interfaces, including the unified
+                                    AWS CLI.
+                                 </p>
+                                 <h2 id="Welcome.pricing">Pricing</h2>
+                                 
+                                 
+                                 <p>There is no additional charge for Elastic Beanstalk. You pay only for the underlying
+                                    AWS resources
+                                    that your application consumes. For details about pricing, see the <a href="https://aws.amazon.com/elasticbeanstalk" rel="noopener noreferrer" target="_blank"><span>Elastic Beanstalk service detail page</span><awsui-icon class="awsdocs-link-icon" name="external"></awsui-icon></a>.
+                                 </p>
+                                 
+                                 <h2 id="Welcome.WhereToGo">Where to go next</h2>
+                                 
+                                 
+                                 <p>This guide contains conceptual information about the Elastic Beanstalk web service,
+                                    as well as
+                                    information about how to use the service to deploy web applications. Separate sections
+                                    describe how to use the Elastic Beanstalk console, command line interface (CLI) tools,
+                                    and API to
+                                    deploy and manage your Elastic Beanstalk environments. This guide also documents how
+                                    Elastic Beanstalk is integrated
+                                    with other services provided by Amazon Web Services.
+                                 </p>
+                                 
+                                 <p>We recommend that you first read <a href="./GettingStarted.html">Getting started using Elastic Beanstalk</a> to learn how to start using Elastic Beanstalk. <em>Getting Started</em> steps
+                                    you through creating, viewing, and updating your Elastic Beanstalk application, as
+                                    well as editing and
+                                    terminating your Elastic Beanstalk environment. <em>Getting Started</em> also describes different ways you can
+                                    access Elastic Beanstalk.
+                                 </p>
+                                 
+                                 <p>To learn more about an Elastic Beanstalk application and its components, see the following
+                                    pages.
+                                 </p>
+                                 
+                                 <div class="itemizedlist">
+                                     
+                                     
+                                     
+                                     
+                                    
+                                    <ul class="itemizedlist" type="disc">
+                                       <li class="listitem">
+                                          
+                                          <p><a href="./concepts.html">Elastic Beanstalk concepts</a></p>
+                                          
+                                       </li>
+                                       <li class="listitem">
+                                          
+                                          <p><a href="./platforms-glossary.html">Elastic Beanstalk platforms glossary</a></p>
+                                          
+                                       </li>
+                                       <li class="listitem">
+                                          
+                                          <p><a href="./platforms-shared-responsibility.html">Shared responsibility model for Elastic Beanstalk platform maintenance</a></p>
+                                          
+                                       </li>
+                                       <li class="listitem">
+                                          
+                                          <p><a href="./platforms-support-policy.html">Elastic Beanstalk platform support policy</a></p>
+                                          
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 
+                                 <awsdocs-copyright class="copyright-print"></awsdocs-copyright>
+                                 <awsdocs-thumb-feedback right-edge="{{$ctrl.thumbFeedbackRightEdge}}"></awsdocs-thumb-feedback>
+                              </div>
+                              <noscript>
+                                 <div>
+                                    <div>
+                                       <div>
+                                          <div id="js_error_message">
+                                             <p><img src="https://d1ge0kk1l5kms0.cloudfront.net/images/G/01/webservices/console/warning.png" alt="Warning" /> <strong>Javascript is disabled or is unavailable in your
+                                                   browser.</strong></p>
+                                             <p>To use the AWS Documentation, Javascript must be
+                                                enabled. Please refer to your browser's Help pages for instructions.
+                                             </p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </noscript>
+                              <div id="main-col-footer" class="awsui-util-font-size-0">
+                                 <div id="doc-conventions"><a target="_top" href="/general/latest/gr/docconventions.html">Document Conventions</a></div>
+                                 <div class="prev-next">
+                                    <div id="next" class="next-link" accesskey="n" href="./GettingStarted.html">Getting started</div>
+                                 </div>
+                              </div>
+                              <awsdocs-page-utilities></awsdocs-page-utilities>
+                           </div>
+                           <div id="quick-feedback-yes" style="display: none;">
+                              <div class="title">Did this page help you? - Yes</div>
+                              <div class="content">
+                                 <p>Thanks for letting us know we're doing a good
+                                    job!
+                                 </p>
+                                 <p>If you've got a moment, please tell us what we did right
+                                    so we can do more of it.
+                                 </p>
+                                 <p>
+                                    <awsui-button id="fblink" target="_blank" text="Feedback" click="linkClick($event)" href="https://docs.aws.amazon.com/forms/aws-doc-feedback?hidden_service_name=AEB&amp;topic_url=https://docs.aws.amazon.com/en_us/elasticbeanstalk/latest/dg/Welcome.html"></awsui-button>
+                                 </p>
+                              </div>
+                           </div>
+                           <div id="quick-feedback-no" style="display: none;">
+                              <div class="title">Did this page help you? - No</div>
+                              <div class="content">
+                                 <p>Thanks for letting us know this page needs work. We're
+                                    sorry we let you down.
+                                 </p>
+                                 <p>If you've got a moment, please tell us how we can make
+                                    the documentation better.
+                                 </p>
+                                 <p>
+                                    <awsui-button id="fblink" target="_blank" text="Feedback" click="linkClick($event)" href="https://docs.aws.amazon.com/forms/aws-doc-feedback?hidden_service_name=AEB&amp;topic_url=https://docs.aws.amazon.com/en_us/elasticbeanstalk/latest/dg/Welcome.html"></awsui-button>
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
+                     </body>
+                  </div>
+               </awsdocs-view>
+               <div class="page-loading-indicator" id="page-loading-indicator">
+                  <awsui-spinner size="large"></awsui-spinner>
+               </div>
+            </div>
+            <div id="tools-panel" dom-region="tools">
+               <awsdocs-tools-panel id="awsdocs-tools-panel"></awsdocs-tools-panel>
+            </div>
+         </awsui-app-layout>
+         <awsdocs-cookie-banner class="doc-cookie-banner"></awsdocs-cookie-banner>
+         <!--
+                SiteCatalyst code version: H.25.2.
+                Copyright 1996-2012 Adobe, Inc. All Rights Reserved
+                More info available at http://www.omniture.com
+            --><script language="JavaScript" type="text/javascript">
+var awsdocs = awsdocs || {};
+awsdocs.prop66 = 'AWS Elastic Beanstalk';
+awsdocs.prop65 =  'Developer Guide';
+            </script><script src="https://a0.awsstatic.com/s_code/js/3.0/awshome_s_code.js" language="JavaScript" type="text/javascript"></script>
+         <!--/DO NOT REMOVE/-->
+         <!--End SiteCatalyst code version: H.25.2.--></div>
+   </body>
+</html>

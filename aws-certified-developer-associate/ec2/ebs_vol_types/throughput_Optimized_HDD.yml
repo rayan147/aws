@@ -1,0 +1,10 @@
+name: Throughput Optimized HDD
+workload: Streaming workloads requiring consistent ,fast throughtput at a low price
+  - Big Data,Data warehouse,log processing
+  - Apache kafka
+  - Cannto be a boot volume
+
+features:
+ 500GB - 16TB 
+ Max IOPS is 500
+ Max throughput of 500 MB/s - can burst

@@ -1,0 +1,12 @@
+name: General Purpose SSD volumes 
+work_load:
+  - recommended for most workloads
+  - system boot volumes
+  - virtual desktop
+  - low-latency interactive apps
+  - dev and tst envs 
+
+features:
+  - 1GB - 16TB 
+  - small gps volumes can burst IOPS to 3000
+

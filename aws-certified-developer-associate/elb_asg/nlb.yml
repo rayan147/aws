@@ -1,0 +1,23 @@
+# NOTES FOR CLASSIC LOAD BALANCER 
+version: 2013
+name: network  load balancer 
+supports:
+  - "TCP Layer 4 "
+health_checks:
+   - "tcp"
+   - "udp"
+   - "TLS"
+hostname: fix hostame "xxxx.region.elb.amazonaws.com"
+work_flow_external: client >> NLB >> EC2
+work_flow_internal: public_ec2 >> NLB >> private_ec2
+
+use_cases:
+  - "forward TCP && UDP traffic to your instances"
+  - "High performence ..handles millions of request per seconds"
+  - "less latency ~ 100 ms (vs 400 ms for ALB)"
+  - "has one static IP per AZ and support elastic IP"
+  - "NLB are used for extreme performance .TCP or UDP traffic"
+  - "USES TAEGET GROUPS"
+  - "DOESN NOT HAVE A SECURITY GROUP"
+
+

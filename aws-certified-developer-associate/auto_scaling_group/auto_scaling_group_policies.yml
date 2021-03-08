@@ -1,0 +1,16 @@
+name: auto scaling groups policies 
+policies:
+  Target_Tracking_Scaling: 
+       - Most simple and easy to set-up
+       - SCALE base on ASG CPU to stay at around 40%
+       - TRACKS 
+  Simple_/Step_Scaling:
+       - A CloudWatch alarm to trigger CPU > 70% THEN Add two instances
+       - if CloudWatch alarm is trigger CPU < 30% , remove one instance
+  Scheduled_Actions:
+       - Anticipate a scaling based on know pattern
+       - ei, increase a min capacity to 10 at 5pm on firdays 
+         
+
+  Auto_Scaling_Gropus_Scaling cooldowns:
+     

@@ -1,0 +1,12 @@
+name: Stickenes
+- routes traffic to anstance base on cookises 
+name: ASQ
+- scale policies can be on CPU ,network, and even custom metric .
+- To update an ASG , you must provide  A NEW LAUNCH TEMPLATE .
+- IAM roles attach to an ASG will get assigned to EC2 instances as well 
+- ASG are free . you pay for the underkying resources being launched 
+
+
+ TLS termination:
+   server_Name_indication:
+     SSL_Security_policies: 
