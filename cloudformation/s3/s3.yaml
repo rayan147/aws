@@ -1,0 +1,9 @@
+Description: "S3 bucket that holds all cloudformation stacks"
+Resources:
+  S3Bucket:
+    Type: AWS::S3::Bucket
+    Properties: 
+       AccessControl: Private 
+       BucketName: 'rayan147-admin-cloudformation-stacks'
+       VersioningConfiguration: 
+           Status: Enabled

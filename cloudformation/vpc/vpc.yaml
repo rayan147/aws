@@ -1,0 +1,18 @@
+Resources:
+ NomadClusterVPC:
+   Type: AWS::EC2::VPC
+   Properties:
+      CidrBlock: 10.0.0.0/16
+      EnableDnsSupport: 'true'
+      EnableDnsHostnames: 'true'
+      InstanceTenancy: default 
+      Tags:
+       - Key: stack
+         Value: dev
+
+Outputs:
+   NomadCluster:
+    Description: The VPC where the  nomad cluster lives
+    Value: !Ref NomadClusterVPC
+    Export:
+      Name: NomadStackVPC

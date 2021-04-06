@@ -1,0 +1,19 @@
+  Resources:
+   SubnetPublicA:
+    Type: AWS::EC2::Subnet
+    Properties:
+    #import value from vpc.yaml file 
+      VpcId: !ImportValue NomadStackVPC
+      CidrBlock: 10.0.0.0/24
+      AvailabilityZone: "us-east-1a"
+      Tags:
+      - Key: stack
+        Value: production
+  Outputs:
+    NomadCluster:
+     Description: The SubnetPublicA where the  nomad cluster lives
+     Value: !Ref SubnetPublicA
+     Export:
+       Name: NomadStackVPCPulicsubnet
+
+       
